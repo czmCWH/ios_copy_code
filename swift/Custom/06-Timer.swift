@@ -62,6 +62,37 @@ func removeTimer() {
     }
 }
 
+// MARK:- Timer 闭包 的方式实现计时器
+
+do {
+    weak var timer: Timer?
+    
+    /// 添加倒计时
+    /// - Parameter seconds: 总秒数
+    private func addTimer(seconds: Int) {
+        removeTimer()
+        
+        let endTime = Date(timeIntervalSinceNow: TimeInterval(seconds))
+        let tmpTimer = Timer(timeInterval: 1, repeats: true) {[weak self] (t) in
+            let interval = endTime.timeIntervalSinceNow
+            let integerCount = Int(ceil(interval))
+            if integerCount <= 0 {
+                self?.removeTimer()
+            } else {
+                print("====update===", integerCount)
+            }
+        }
+        RunLoop.current.add(tmpTimer, forMode: .common)
+        tmpTimer.fire()
+        timer = tmpTimer
+    }
+    
+    
+    private func removeTimer() {
+        self.timer?.invalidate()
+        self.timer = nil
+    }
+}
 
 // MARK:- OC 的方式实现计时器
 
