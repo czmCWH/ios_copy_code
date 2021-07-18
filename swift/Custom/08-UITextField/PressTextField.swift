@@ -1,9 +1,3 @@
-//
-//  PressTextField.swift
-//  power-coolene
-//
-//  Created by dong on 2021/1/27.
-//
 
 import UIKit
 
