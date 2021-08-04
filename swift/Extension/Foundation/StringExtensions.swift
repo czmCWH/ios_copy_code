@@ -29,6 +29,35 @@ extension String {
     func sizeText(font: UIFont, size: CGSize) -> CGRect {
         return (self as NSString).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
     }
+    
+    /**
+     * 查询lable高度
+     * @param fontSize, 字体大小
+     * @param width, lable宽度
+     */
+    func getLableHeightByWidth(_ fontSize: CGFloat,
+                               width: CGFloat,
+                               font: UIFont) -> CGFloat {
+        let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineBreakMode = .byWordWrapping
+        let attributes = [NSFontAttributeName:font,
+                          NSParagraphStyleAttributeName:paragraphStyle.copy()]
+        
+        let text = self as NSString
+        let rect = text.boundingRect(with: size, options:.usesLineFragmentOrigin, attributes: attributes, context:nil)
+        return rect.size.height
+    }
+    
+    /// 获取下标对应的字符
+    func charAt(pos: Int) -> Character? {
+        if pos < 0 || pos >= count {
+            return nil   //判断边界条件
+        }
+        let index = self.index(self.startIndex, offsetBy: pos)
+        let str = self[index]
+        return Character(String(str))
+    }
 }
 
 // MARK:- 图片 url 中文处理

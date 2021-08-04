@@ -108,6 +108,21 @@ class ZMVerifyCodeInputView: UIView, UITextFieldDelegate{
         NotificationCenter.default.removeObserver(self)
     }
     
+    /// 清除输入框
+    func clearCode() {
+        self.textField.text = nil
+        for idx in 0..<self.length {
+            let lab = stackView.arrangedSubviews[idx] as! UILabel
+            lab.text = nil
+            lab.layer.borderColor = self.norColor.cgColor
+        }
+    }
+    
+    /// 成为响应者
+    func becomeResponder() {
+        self.textField.becomeFirstResponder()
+    }
+    
     @objc private func textFieldChanged(_ notify: Notification) {
         self.updateLabelStatus()
         

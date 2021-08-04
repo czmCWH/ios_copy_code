@@ -22,3 +22,20 @@ NotificationCenter.default.addObserver(self, selector: #selector(textFieldChange
     
     
 }
+
+// MARK:- UITextFieldDelegate
+
+// 强制UITextField只能输入大写字母
+// https://15tar.com/ios/2015/04/10/force-uitextfield-input-text-to-upper-case.html
+func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    var lowercaseCharRange: NSRange
+    lowercaseCharRange = (string as NSString).rangeOfCharacter(from: CharacterSet.lowercaseLetters)
+
+    if lowercaseCharRange.location != NSNotFound {
+
+        textField.text = ((textField.text ?? "") as NSString).replacingCharacters(in: range, with: string.uppercased())
+        return false
+    }
+
+    return true
+}

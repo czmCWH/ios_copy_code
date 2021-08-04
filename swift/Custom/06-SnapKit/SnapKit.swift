@@ -14,3 +14,17 @@ shopItemView.snp.makeConstraints {
         $0.bottom.equalToSuperview().offset(-10)
     }
 }
+
+---------------------------设置一个子view的四边内边距据父view都为20
+
+button.snp.makeConstraints { (make) in
+    make.edges.equalTo(bgView).inset(UIEdgeInsetsMake(20, 20, 20, 20))
+    }
+
+//上面代码和注释代码等同
+//        box.snp.makeConstraints { (make) -> Void in
+//            make.top.equalTo(superview).offset(20)
+//            make.left.equalTo(superview).offset(20)
+//            make.bottom.equalTo(superview).offset(-20)
+//            make.right.equalTo(superview).offset(-20)
+//        }
