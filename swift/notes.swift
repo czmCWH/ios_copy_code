@@ -1,9 +1,19 @@
 
 // MARK: - ----------------------- 常用的注释 -----------------------
 
-// MARK: public property
+// MARK: Views
 
-// MARK: private property
+// MARK: Stored properties
+
+// MARK: UI properties
+
+// MARK: public properties
+
+// MARK: private properties
+
+// MARK: action properties
+
+// MARK: Overrides
 
 // MARK: Lifecycle
 
