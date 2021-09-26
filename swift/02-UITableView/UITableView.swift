@@ -19,7 +19,7 @@ if #available(iOS 11.0, *) {
 } else {
     self.automaticallyAdjustsScrollViewInsets = false;
 }
-(tableView as UIScrollView).scrollsToTop = false
+tableView.scrollsToTop = false
 tableView.dataSource = self
 tableView.delegate = self
 tableView.register(ExampleCell.self, forCellReuseIdentifier: ExampleCell.reuseIdentifier)
