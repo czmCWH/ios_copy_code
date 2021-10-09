@@ -15,9 +15,9 @@ tableView.tableFooterView = UIView()
 tableView.estimatedRowHeight = 50.0
 tableView.separatorStyle = .none
 if #available(iOS 11.0, *) {
-    tableView.contentInsetAdjustmentBehavior = .never;
+    tableView.contentInsetAdjustmentBehavior = .never
 } else {
-    self.automaticallyAdjustsScrollViewInsets = false;
+    self.automaticallyAdjustsScrollViewInsets = false
 }
 tableView.scrollsToTop = false
 tableView.dataSource = self
