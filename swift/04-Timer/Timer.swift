@@ -1,6 +1,6 @@
 
 
-// MARK:- GCD的方式实现计时器
+// MARK: - GCD的方式实现计时器
 
 var timer: DispatchSourceTimer?
 override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -32,7 +32,7 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 }
 
 
-// MARK:- Timer 的方式实现计时器
+// MARK: - Timer 的方式实现计时器
 
 weak var countdownTimer: Timer?
 var countDownNum = 61
@@ -62,7 +62,7 @@ func removeTimer() {
     }
 }
 
-// MARK:- Timer 闭包 的方式实现计时器
+// MARK: - Timer 闭包 的方式实现计时器
 
 do {
     weak var timer: Timer?
@@ -94,7 +94,7 @@ do {
     }
 }
 
-// MARK:- OC 的方式实现计时器
+// MARK: - OC 的方式实现计时器
 
 int seconds = 60;
 
@@ -117,3 +117,26 @@ NSLog(@"%d",interval);
 }
 });
 dispatch_resume(timer);
+
+
+// MARK: - 实现计时器执行
+
+/// 数据刷新倒计时
+private weak var timer: Timer?
+
+/// 添加刷新定时器
+private func addTimer() {
+    removeTimer()
+    let tmpTimer = Timer(timeInterval: 2, repeats: true) { [weak self] (t) in
+        print("===czm===", t)
+    }
+    RunLoop.current.add(tmpTimer, forMode: .common)
+    tmpTimer.fire()
+    timer = tmpTimer
+}
+
+/// 移除刷新计时器
+private func removeTimer() {
+    self.timer?.invalidate()
+    self.timer = nil
+}
