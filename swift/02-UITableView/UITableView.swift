@@ -17,7 +17,7 @@ if #available(iOS 11.0, *) {
 
 let tableView = UITableView(frame: .zero, style: .plain)
 tableView.backgroundColor = UIColor.white
-tableView.tableHeaderView = UIView()
+tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
 tableView.tableFooterView = UIView()
 tableView.estimatedRowHeight = 50.0
 tableView.separatorStyle = .none
