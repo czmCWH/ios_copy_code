@@ -17,7 +17,7 @@ if #available(iOS 11.0, *) {
 
 let tableView = UITableView(frame: .zero, style: .plain)
 tableView.backgroundColor = UIColor.white
-tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
+tableView.tableHeaderView = UIView()
 tableView.tableFooterView = UIView()
 tableView.estimatedRowHeight = 50.0
 tableView.separatorStyle = .none
@@ -41,7 +41,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 let tableView = UITableView(frame: .zero, style: .grouped)
 tableView.backgroundColor = UIColor.white
-tableView.tableHeaderView = UIView()
+tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
 tableView.tableFooterView = UIView()
 tableView.rowHeight = 50
 tableView.estimatedRowHeight = 50.0
