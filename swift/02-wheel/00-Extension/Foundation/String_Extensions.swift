@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK:- 字符串 size 计算
+// MARK: - 字符串 size 计算
 extension String {
     
     /// 计算文本的最大高度
@@ -60,7 +60,7 @@ extension String {
     }
 }
 
-// MARK:- 图片 url 中文处理
+// MARK: - 图片 url 中文处理
 extension String {
     /// 判断字符串是否包含中文、空格
     /// - Returns: true：有中文、空格
@@ -86,7 +86,7 @@ extension String {
     }
 }
 
-// MARK:- 字符串过滤
+// MARK: - 字符串过滤
 extension String {
     
     /// 去掉字符串首尾空格 + 换行
@@ -112,3 +112,44 @@ extension String {
             .filter{!$0.isEmpty}
     }
 }
+
+// MARK: - 人民币单位转换
+
+extension String {
+    
+    // 把单位为分 转化为 单位为元，并且保留小数点后2位 的字符串
+    func fenToRMB() -> Self {
+        var str = self
+        // 先去掉负数
+        var isNegativeNum = false
+        if str.hasPrefix("-") {
+            str = (str as NSString).substring(from: 1)
+            isNegativeNum = true
+        }
+        // 去掉以0开头
+        while str.hasPrefix("0") == true {
+            str = (str as NSString).substring(from: 1)
+        }
+        // 添加.
+        if str.count < 3 {
+            str = String(repeating: "0", count: 3 - str.count) + str
+        }
+        str.insert(".", at: str.index(str.endIndex, offsetBy: -2))
+        return isNegativeNum ? "-\(str)" : str
+    }
+    
+    // 把单位为分 转化为 单位为元，并且去掉小数点后多余0 的字符串
+    func fenToRMBEndNoZero() -> Self {
+        var str = self.fenToRMB()
+        // 去掉以0结尾
+        while str.hasSuffix("0") {
+            str.remove(at: str.index(str.endIndex, offsetBy: -1))
+        }
+        // 去掉以.结尾
+        if str.hasSuffix(".") {
+            str.remove(at: str.index(str.endIndex, offsetBy: -1))
+        }
+        return str
+    }
+}
+
