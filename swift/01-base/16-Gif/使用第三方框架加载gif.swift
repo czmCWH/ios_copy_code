@@ -14,6 +14,7 @@ do {
     
     // 1、加载本地
     let imgView = SDAnimatedImageView()
+    imgView.runLoopMode = .default
     imgView.image = SDAnimatedImage(named: "tag_light_twinkle.gif")
     imgView.contentMode = .scaleAspectFit
     
@@ -24,7 +25,9 @@ do {
 }
 
 // MARK: - SDWebImageFLPlugin 方式加载
- 
+
+import SDWebImageFLPlugin
+
 do {
     // 1、加载本地
      let imgView = FLAnimatedImageView()
@@ -59,6 +62,8 @@ do {
 }
 
 // MARK: - Gifu 方式加载
+
+import Gifu
 
 do {
     // 1、加载本地
