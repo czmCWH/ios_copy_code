@@ -64,7 +64,24 @@ class ChildViewController: UIViewController, UIPageViewControllerDataSource, UIP
         let toVC = pageControllers[index]
         // .forward：从左往右（或从下往上）；.reverse：从右向左（或从上往下）
         let direction: UIPageViewController.NavigationDirection = (currentIndex > index) ? .reverse : .forward
-        // 设置当前显示那个VC
+        
+        /*  该方法用于设置要显示的 VC
+         
+         @param1 viewControllers 参数取值：
+         
+            如果 transitionStyle 为 .pageCurl，则参数 viewControllers 取决于 .spineLocation 和 isDoubleSided 的值，如下表：
+         
+            spineLocation       isDoubleSided               viewControllers
+         
+                .mid                true            传递要在左侧显示的页面和要在右侧显示的页面
+                .min or .max        true            传递要显示的页面的正面和先前显示的页面的背面。背面用于翻页动画.
+                .min or .max        false           传递要显示的页面的正面。
+         
+            如果 transitionStyle 为 .scroll，则参数 viewControllers 只需要传递一个当前显示的 VC
+         
+         @param2 direction 参数取值：forward：从左往右（或从下往上）；.reverse：从右向左（或从上往下）
+         
+         */
         pageViewController.setViewControllers([toVC], direction: direction, animated: true, completion: nil)
     }
     

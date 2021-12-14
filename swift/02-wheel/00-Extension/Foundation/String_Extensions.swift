@@ -75,14 +75,15 @@ extension String {
         return false
     }
     
-    /// 中文url百分号转码
-    func percentEncoding() -> String {
-        if self.includeChinese() {
-            let str = self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
-            return str
-        } else {
-            return self
-        }
+    /// 中文字符串百分号转码
+    func urlEncoded()-> String {
+        let result = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        return result ?? ""
+    }
+    
+    /// 中文字符串百分号解码
+    func urlDecode()-> String {
+        self.removingPercentEncoding ?? ""
     }
 }
 
@@ -90,12 +91,12 @@ extension String {
 extension String {
     
     /// 去掉字符串首尾空格 + 换行
-    var trimmingHeadTailSpaceLine: String {
+    var trimHeadEndSpaceLine: String {
         return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
     /// 去掉字符串首尾空格
-    var trimmingHeadTailSpace: String {
+    var trimHeadEndTailSpace: String {
         return self.trimmingCharacters(in: CharacterSet.whitespaces)
     }
     
@@ -110,6 +111,22 @@ extension String {
             .joined()
             .components(separatedBy: .whitespaces)
             .filter{!$0.isEmpty}
+    }
+    
+    /// 把字符串中某一组字符串用某个字符串替换
+    func replace(segs: String..., with replacement: String) -> String {
+        var result: String = self
+        for seg in segs {
+            guard result.contains(seg) else { continue }
+            result = result.replacingOccurrences(of: seg, with: replacement)
+        }
+        return result
+    }
+
+    /// 提取字符串中的数字拼接成一个新的字符串
+    func extractDigits() -> String {
+        guard !self.isEmpty else { return "" }
+        return self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
     }
 }
 
@@ -153,3 +170,25 @@ extension String {
     }
 }
 
+// MARK: - 字符串截取
+extension String {
+
+    /// 截取第 index 处出现 separato 与下一次出现 separato 之间的字符串
+    func segment(separatedBy separator: String, at index: Int = Int.max) -> String {
+        guard self.contains(separator) else { return self }
+        let segments = components(separatedBy: separator)
+        let realIndex = min(index, segments.count - 1)
+        return String(segments[realIndex])
+    }
+
+    /// 截取第一次出现某个字符后面的所有字符串
+    func segment(from chtStr: Character) -> String {
+        if var firstIndex = self.firstIndex(of: chtStr) {
+            firstIndex = self.index(firstIndex, offsetBy: 1)
+            let subString = self[firstIndex..<self.endIndex]
+            return String(subString)
+        }
+        return self
+    }
+
+}

@@ -11,6 +11,12 @@ textField.autocorrectionType = .no
 textField.tintColor = .clear
 // 清除文字颜色
 textField.textColor = .clear
+textField.attributedPlaceholder = NSAttributedString(string: "搜索框占位文字", attributes: [.font: UIFont.zm_pf_regular(size: 12), .foregroundColor: UIColor(0xC2C4C9)])
+
+// 设置左侧占位View
+textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 28, height: 30))
+textField.leftViewMode = .always
+
 textField.delegate = self;
 self.addSubviewToFill(textField)
 

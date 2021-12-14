@@ -7,5 +7,14 @@ extension Collection {
         return indices.contains(index) ? self[index] : nil
     }
     
+}
+
+
+extension Sequence where Element: Hashable {
     
+    /// 把 String、Set 转换为 Array
+    func uniqued() -> [Element] {
+        var set = Set<Element>()
+        return filter { set.insert($0).inserted }
+    }
 }
