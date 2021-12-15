@@ -1,13 +1,8 @@
-//
-//  ChildViewController.swift
-//  test01
-//
-//  Created by czm on 2021/11/25.
-//
 
 import UIKit
 import EachNavigationBar
 
+/// 在自控制器之间导航
 class ChildViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
 
