@@ -99,7 +99,7 @@ class WebViewController: UIViewController, WKScriptMessageHandler, WKUIDelegate,
         webView.allowsBackForwardNavigationGestures = true
         // 在iOS上默认为false，标识不允许链接预览
         webView.allowsLinkPreview = true
-        // 标识是否支持放大手势，默认为NO
+        // 标识是否支持放大手势，默认为NO（允许链接3D Touch）
         webView.allowsMagnification = false
         
         view = webView
