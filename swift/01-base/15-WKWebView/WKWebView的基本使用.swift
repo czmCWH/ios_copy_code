@@ -6,6 +6,8 @@
  
  http://blog.darkangel7.com/2017/05/10/iOS中UIWebView与WKWebView、JavaScript与OC交互、Cookie管理看我就够（中）/
  
+ https://juejin.cn/post/6844903534505230344
+ 
  百度App技术 * WKWebView 加载生命周期与代理方法剖析 https://mp.weixin.qq.com/s/83ZUNuWSCrVO3vrIGQr8tA
  
  搜狐 * 干货：探秘WKWebView https://mp.weixin.qq.com/s/l9D4V0ON3uJ0HfsJ7bpJiQ
@@ -95,8 +97,10 @@ class WebViewController: UIViewController, WKScriptMessageHandler, WKUIDelegate,
         webView.customUserAgent = "test_app/1.0.0"
         // 允许右滑返回上个链接，左滑前进，默认值为false
         webView.allowsBackForwardNavigationGestures = true
-        // 允许链接3D Touch
+        // 在iOS上默认为false，标识不允许链接预览
         webView.allowsLinkPreview = true
+        // 标识是否支持放大手势，默认为NO
+        webView.allowsMagnification = false
         
         view = webView
     }

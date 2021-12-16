@@ -8,7 +8,7 @@
 import Foundation
 
 
-// 设置富文本的两种方式
+// MARK: - 设置富文本的两种方式
 
 do {
     let lab = UILabel()
@@ -57,4 +57,16 @@ do {
     
     lab.attributedText = attri
     self.view.addSubview(lab)
+}
+
+// MARK: - 富文本中插入图片
+
+do {
+    let attri = NSMutableAttributedString(string: " 宝宝春季背带裙女宝背带裙背 带女宝背带裙裙女宝背带裙背 带女宝背带裙", attributes: [.foregroundColor: UIColor(0x404040), .font: UIFont(name: "PingFangSC-Regular", size: 13)])
+    let attch = NSTextAttachment()
+    attch.image = UIImage(named: "good_icon")
+    attch.bounds = CGRect(x: 0, y: -5, width: 37, height: 18)
+    let attriAttch = NSAttributedString(attachment: attch)
+    attri.insert(attriAttch, at: 0)
+    lab.attributedText = attri
 }
