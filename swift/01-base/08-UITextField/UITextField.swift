@@ -17,6 +17,11 @@ textField.attributedPlaceholder = NSAttributedString(string: "搜索框占位文
 textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 28, height: 30))
 textField.leftViewMode = .always
 
+textField.returnKeyType = .search
+textField.enablesReturnKeyAutomatically = true
+
+textField.clearButtonMode = .whileEditing
+
 textField.delegate = self;
 self.addSubviewToFill(textField)
 
@@ -28,6 +33,27 @@ NotificationCenter.default.addObserver(self, selector: #selector(textFieldChange
     
     
 }
+
+// MARK:- UITextField一些可被重写的方法
+
+{
+    
+    – textRectForBounds:　 //重写来重置文字区域
+    – drawTextInRect: 　　 //改变绘文字属性.重写时调用super可以按默认图形属性绘制,若自己完全重写绘制函数，就不用调用super了.
+    – placeholderRectForBounds:　　//重写来重置占位符区域
+    – drawPlaceholderInRect:　　//重写改变绘制占位符属性.重写时调用super可以按默认图形属性绘制,若自己完全重写绘制函数，就不用调用super了
+    – borderRectForBounds:　　//重写来重置边缘区域
+    – editingRectForBounds:　　//重写来重置编辑区域
+    – clearButtonRectForBounds:　　//重写来重置clearButton位置,改变size可能导致button的图片失真
+    – leftViewRectForBounds:
+    – rightViewRectForBounds:
+    ————————————————
+    版权声明：本文为CSDN博主「H.A.N」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+    原文链接：https://blog.csdn.net/u010960265/article/details/82905395
+    
+}
+
+
 
 // MARK:- UITextFieldDelegate
 

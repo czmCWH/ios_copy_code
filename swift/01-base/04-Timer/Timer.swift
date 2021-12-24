@@ -140,3 +140,18 @@ private func removeTimer() {
     self.timer?.invalidate()
     self.timer = nil
 }
+
+
+/// https://mp.weixin.qq.com/s/-MejEAp8nQI4Vctsk8A_aw
+
+do {
+    /// 重启timer
+    func stratTimer() {
+        self.timer?.fireDate = Date.distantPast
+    }
+    
+    /// 暂停timer
+    func pauseTimer() {
+        self.timer?.fireDate = Date.distantFuture
+    }
+}
