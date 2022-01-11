@@ -29,7 +29,7 @@ class NextViewController: UIViewController, UICollectionViewDelegate, UICollecti
         flowLayout.minimumInteritemSpacing = 24
         // section headers 的默认大小，默认值为 (0, 0)
         flowLayout.headerReferenceSize = .zero
-        // 滚动时，section headers 是否固定到顶部，默认false不固定
+        // 滚动时，section headers 是否固定吸附到顶部，默认false不固定
         flowLayout.sectionHeadersPinToVisibleBounds = false
         // 每一组的内边距，默认值为.zero。
         flowLayout.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
