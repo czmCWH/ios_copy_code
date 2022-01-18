@@ -15,6 +15,10 @@
 
  清空归档对象
  UserModel.clearArchiver()
+ 
+ 
+ https://mp.weixin.qq.com/s/5tVSwh3Yb9by-rOOBdkS1Q
+ 
  */
 
 import UIKit
