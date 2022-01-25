@@ -27,3 +27,12 @@ do {
         imgView.image = newImg
     }
 }
+
+// MARK: - UIImage图片压缩
+
+do {
+    let imgData = UIImage(named: "good_icon")?.pngData()
+    print("===czm===", imgData?.count)
+    // 49KB
+    // 45323
+}

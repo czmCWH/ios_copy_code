@@ -24,6 +24,16 @@ do {
     imgView.sd_setImage(with: URL(string: "https://www.123.gif"), placeholderImage: UIImage(named: ""))
 }
 
+/*
+ pod 'SDWebImage', '~> 5.0'
+ pod 'SDWebImageFLPlugin'  # 加载gif
+ pod 'SDWebImageWebPCoder'# 兼容webp格式图片
+ 
+ // 在AppDelegate里添加这行代码，支持 webp 格式图片
+ let WebPCoder = SDImageWebPCoder.shared
+ SDImageCodersManager.shared.addCoder(WebPCoder)
+*/
+
 // MARK: - SDWebImageFLPlugin 方式加载
 
 import SDWebImageFLPlugin
@@ -60,6 +70,18 @@ do {
     // 2、加载网络图片
     imageView.kf.setImage(with: url)
 }
+
+/*
+ pod 'Kingfisher'
+ pod "KingfisherWebP"   # 支持 webP 格式图片
+ 
+ // 在AppDelegate里添加这行代码，即可支持 webp 格式图片
+ KingfisherManager.shared.defaultOptions += [
+   .processor(WebPProcessor.default),
+   .cacheSerializer(WebPSerializer.default)
+ ]
+
+ */
 
 // MARK: - Gifu 方式加载
 

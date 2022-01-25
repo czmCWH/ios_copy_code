@@ -3,7 +3,8 @@
 // https://www.jianshu.com/p/e7c9e94e165b
 // https://github.com/AlfredZY/AZTools
 //
-// 博客方法的缺点：一旦分类重写了layerClass方法，则所有的view都会被重写
+// 博客方法的缺点：一旦分类重写了layerClass方法，则所有的view都会被重写。
+// 因此我才用继承方式
 
 import UIKit
 
