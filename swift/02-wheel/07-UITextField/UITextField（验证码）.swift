@@ -18,6 +18,8 @@
     
  https://github.com/josercc/ZHVerifyCodeField
  
+ 记一次验证码输入框的实现：https://kemchenj.github.io/2019-04-07/#more
+ 
  */
 
 import UIKit
