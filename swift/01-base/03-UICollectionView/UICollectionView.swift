@@ -1,9 +1,7 @@
-//
-//  NextViewController.swift
-//  test01
-//
-//  Created by michael on 2021/6/25.
-//
+/*
+ 详情参考：http://www.liupeng.tech/2016/09/13/iOS%E6%8E%A7%E4%BB%B6%E8%AF%A6%E8%A7%A3%E4%B9%8BUIScrollView/
+ */
+
 
 import UIKit
 import WebKit
@@ -36,10 +34,24 @@ class NextViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = UIColor(0xFFFFFF)
-        /// 即使内容小于可显示的边界，也允许垂直拖动。即拖动反弹效果
-        collectionView.alwaysBounceVertical = true
-        collectionView.showsVerticalScrollIndicator = false
+        
+        // 是否允许滑动,默认为true
+        collectionView.scrollEnabled = true
+        /*
+         是否只允许同时滑动一个方向,默认为false。
+         如果设置为true, 用户在水平/竖直方向开始进行滑动, 便禁止同时在竖直/水平方向滑动。
+         当用户在对角线方向开始进行滑动,则本次滑动可以同时在任何方向滑动
+         */
+        collectionView.directionalLockEnabled = false
+        // 是否总是有触底反弹效果(即使内容视图小于scrollView的大小),默认为false
+//        collectionView.bounces = false
+//        collectionView.alwaysBounceHorizontal = false
+        collectionView.alwaysBounceVertical = false
+        // 分页效果，在滑动时只会停止在scrollView的bounds的倍数处
         collectionView.isPagingEnabled = false
+        // 用于确定用户抬起手指后的减速率，默认为Normal(慢慢停止)
+        collectionView.decelerationRate = .normal
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
         if #available(iOS 11.0, *) {
