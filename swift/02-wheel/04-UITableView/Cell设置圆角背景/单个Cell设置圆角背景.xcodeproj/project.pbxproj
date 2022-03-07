@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C58F0D227BF8EC10037E604 /* ClipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F0D127BF8EC10037E604 /* ClipViewController.swift */; };
+		4C58F0D427BF8ECF0037E604 /* StretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F0D327BF8ECF0037E604 /* StretchViewController.swift */; };
+		4C58F0D627BF8EF40037E604 /* ClipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F0D527BF8EF40037E604 /* ClipTableViewCell.swift */; };
+		4C58F0D827BF8F060037E604 /* StretchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F0D727BF8F060037E604 /* StretchTableViewCell.swift */; };
+		4C58F0DB27BF95F60037E604 /* LayerMaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F0DA27BF95F60037E604 /* LayerMaskTableViewCell.swift */; };
+		4C58F0DD27BF98890037E604 /* LayerMaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F0DC27BF98890037E604 /* LayerMaskViewController.swift */; };
+		4C7BC96B27BF77C800C4BAD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BC96A27BF77C800C4BAD0 /* AppDelegate.swift */; };
+		4C7BC96F27BF77C800C4BAD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BC96E27BF77C800C4BAD0 /* ViewController.swift */; };
+		4C7BC97227BF77C800C4BAD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7BC97027BF77C800C4BAD0 /* Main.storyboard */; };
+		4C7BC97427BF77C900C4BAD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C7BC97327BF77C900C4BAD0 /* Assets.xcassets */; };
+		4C7BC97727BF77C900C4BAD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7BC97527BF77C900C4BAD0 /* LaunchScreen.storyboard */; };
+		4CCD7FF727C2798B002D2157 /* DisplayCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD7FF627C2798B002D2157 /* DisplayCellViewController.swift */; };
+		4CCD7FF927C279AA002D2157 /* DisplayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD7FF827C279AA002D2157 /* DisplayViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3FEFC43D358E5C712143037F /* Pods-单个Cell设置圆角背景.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-单个Cell设置圆角背景.debug.xcconfig"; path = "Target Support Files/Pods-单个Cell设置圆角背景/Pods-单个Cell设置圆角背景.debug.xcconfig"; sourceTree = "<group>"; };
+		4C58F0D127BF8EC10037E604 /* ClipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipViewController.swift; sourceTree = "<group>"; };
+		4C58F0D327BF8ECF0037E604 /* StretchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchViewController.swift; sourceTree = "<group>"; };
+		4C58F0D527BF8EF40037E604 /* ClipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipTableViewCell.swift; sourceTree = "<group>"; };
+		4C58F0D727BF8F060037E604 /* StretchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchTableViewCell.swift; sourceTree = "<group>"; };
+		4C58F0DA27BF95F60037E604 /* LayerMaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerMaskTableViewCell.swift; sourceTree = "<group>"; };
+		4C58F0DC27BF98890037E604 /* LayerMaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerMaskViewController.swift; sourceTree = "<group>"; };
+		4C7BC96727BF77C800C4BAD0 /* 单个Cell设置圆角背景.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "单个Cell设置圆角背景.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7BC96A27BF77C800C4BAD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C7BC96E27BF77C800C4BAD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C7BC97127BF77C800C4BAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C7BC97327BF77C900C4BAD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C7BC97627BF77C900C4BAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C7BC97827BF77C900C4BAD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CCD7FF627C2798B002D2157 /* DisplayCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCellViewController.swift; sourceTree = "<group>"; };
+		4CCD7FF827C279AA002D2157 /* DisplayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewCell.swift; sourceTree = "<group>"; };
+		668C518D80D573E2A9AAC87A /* Pods-单个Cell设置圆角背景.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-单个Cell设置圆角背景.release.xcconfig"; path = "Target Support Files/Pods-单个Cell设置圆角背景/Pods-单个Cell设置圆角背景.release.xcconfig"; sourceTree = "<group>"; };
+		DD3BB5281505EBB54BA38106 /* Pods___Cell______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Cell______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C7BC96427BF77C800C4BAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C58F0CF27BF8E9F0037E604 /* StretchImage */ = {
+			isa = PBXGroup;
+			children = (
+				4C58F0D327BF8ECF0037E604 /* StretchViewController.swift */,
+				4C58F0D727BF8F060037E604 /* StretchTableViewCell.swift */,
+			);
+			path = StretchImage;
+			sourceTree = "<group>";
+		};
+		4C58F0D027BF8EAA0037E604 /* ClipBounds */ = {
+			isa = PBXGroup;
+			children = (
+				4C58F0D127BF8EC10037E604 /* ClipViewController.swift */,
+				4C58F0D527BF8EF40037E604 /* ClipTableViewCell.swift */,
+			);
+			path = ClipBounds;
+			sourceTree = "<group>";
+		};
+		4C58F0D927BF95E30037E604 /* LayerMask */ = {
+			isa = PBXGroup;
+			children = (
+				4C58F0DC27BF98890037E604 /* LayerMaskViewController.swift */,
+				4C58F0DA27BF95F60037E604 /* LayerMaskTableViewCell.swift */,
+			);
+			path = LayerMask;
+			sourceTree = "<group>";
+		};
+		4C7BC95E27BF77C800C4BAD0 = {
+			isa = PBXGroup;
+			children = (
+				4C7BC96927BF77C800C4BAD0 /* 单个Cell设置圆角背景 */,
+				4C7BC96827BF77C800C4BAD0 /* Products */,
+				BC27282D183563B327E74931 /* Pods */,
+				ABDB2316E75523A4445C08B5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4C7BC96827BF77C800C4BAD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C7BC96727BF77C800C4BAD0 /* 单个Cell设置圆角背景.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C7BC96927BF77C800C4BAD0 /* 单个Cell设置圆角背景 */ = {
+			isa = PBXGroup;
+			children = (
+				4C7BC96A27BF77C800C4BAD0 /* AppDelegate.swift */,
+				4C7BC96E27BF77C800C4BAD0 /* ViewController.swift */,
+				4C58F0D027BF8EAA0037E604 /* ClipBounds */,
+				4C58F0D927BF95E30037E604 /* LayerMask */,
+				4CCD7FF527C27939002D2157 /* DisplayCell */,
+				4C58F0CF27BF8E9F0037E604 /* StretchImage */,
+				4C7BC97027BF77C800C4BAD0 /* Main.storyboard */,
+				4C7BC97327BF77C900C4BAD0 /* Assets.xcassets */,
+				4C7BC97527BF77C900C4BAD0 /* LaunchScreen.storyboard */,
+				4C7BC97827BF77C900C4BAD0 /* Info.plist */,
+			);
+			path = "单个Cell设置圆角背景";
+			sourceTree = "<group>";
+		};
+		4CCD7FF527C27939002D2157 /* DisplayCell */ = {
+			isa = PBXGroup;
+			children = (
+				4CCD7FF627C2798B002D2157 /* DisplayCellViewController.swift */,
+				4CCD7FF827C279AA002D2157 /* DisplayViewCell.swift */,
+			);
+			path = DisplayCell;
+			sourceTree = "<group>";
+		};
+		ABDB2316E75523A4445C08B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD3BB5281505EBB54BA38106 /* Pods___Cell______.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC27282D183563B327E74931 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FEFC43D358E5C712143037F /* Pods-单个Cell设置圆角背景.debug.xcconfig */,
+				668C518D80D573E2A9AAC87A /* Pods-单个Cell设置圆角背景.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C7BC96627BF77C800C4BAD0 /* 单个Cell设置圆角背景 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C7BC97B27BF77C900C4BAD0 /* Build configuration list for PBXNativeTarget "单个Cell设置圆角背景" */;
+			buildPhases = (
+				F2430FD4C34FEFBDDFB75144 /* [CP] Check Pods Manifest.lock */,
+				4C7BC96327BF77C800C4BAD0 /* Sources */,
+				4C7BC96427BF77C800C4BAD0 /* Frameworks */,
+				4C7BC96527BF77C800C4BAD0 /* Resources */,
+				DFAD590DD7ECC0922AC157CE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "单个Cell设置圆角背景";
+			productName = "单个Cell设置圆角背景";
+			productReference = 4C7BC96727BF77C800C4BAD0 /* 单个Cell设置圆角背景.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C7BC95F27BF77C800C4BAD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					4C7BC96627BF77C800C4BAD0 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+				};
+			};
+			buildConfigurationList = 4C7BC96227BF77C800C4BAD0 /* Build configuration list for PBXProject "单个Cell设置圆角背景" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C7BC95E27BF77C800C4BAD0;
+			productRefGroup = 4C7BC96827BF77C800C4BAD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C7BC96627BF77C800C4BAD0 /* 单个Cell设置圆角背景 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C7BC96527BF77C800C4BAD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7BC97727BF77C900C4BAD0 /* LaunchScreen.storyboard in Resources */,
+				4C7BC97427BF77C900C4BAD0 /* Assets.xcassets in Resources */,
+				4C7BC97227BF77C800C4BAD0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DFAD590DD7ECC0922AC157CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-单个Cell设置圆角背景/Pods-单个Cell设置圆角背景-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-单个Cell设置圆角背景/Pods-单个Cell设置圆角背景-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-单个Cell设置圆角背景/Pods-单个Cell设置圆角背景-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2430FD4C34FEFBDDFB75144 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-单个Cell设置圆角背景-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C7BC96327BF77C800C4BAD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C58F0DD27BF98890037E604 /* LayerMaskViewController.swift in Sources */,
+				4CCD7FF727C2798B002D2157 /* DisplayCellViewController.swift in Sources */,
+				4C58F0DB27BF95F60037E604 /* LayerMaskTableViewCell.swift in Sources */,
+				4C7BC96F27BF77C800C4BAD0 /* ViewController.swift in Sources */,
+				4C7BC96B27BF77C800C4BAD0 /* AppDelegate.swift in Sources */,
+				4C58F0D427BF8ECF0037E604 /* StretchViewController.swift in Sources */,
+				4C58F0D227BF8EC10037E604 /* ClipViewController.swift in Sources */,
+				4C58F0D827BF8F060037E604 /* StretchTableViewCell.swift in Sources */,
+				4C58F0D627BF8EF40037E604 /* ClipTableViewCell.swift in Sources */,
+				4CCD7FF927C279AA002D2157 /* DisplayViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4C7BC97027BF77C800C4BAD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C7BC97127BF77C800C4BAD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4C7BC97527BF77C900C4BAD0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C7BC97627BF77C900C4BAD0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C7BC97927BF77C900C4BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C7BC97A27BF77C900C4BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C7BC97C27BF77C900C4BAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FEFC43D358E5C712143037F /* Pods-单个Cell设置圆角背景.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6UNEH5N3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "单个Cell设置圆角背景/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.czm.test01;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4C7BC97D27BF77C900C4BAD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 668C518D80D573E2A9AAC87A /* Pods-单个Cell设置圆角背景.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6UNEH5N3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "单个Cell设置圆角背景/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.czm.test01;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C7BC96227BF77C800C4BAD0 /* Build configuration list for PBXProject "单个Cell设置圆角背景" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7BC97927BF77C900C4BAD0 /* Debug */,
+				4C7BC97A27BF77C900C4BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C7BC97B27BF77C900C4BAD0 /* Build configuration list for PBXNativeTarget "单个Cell设置圆角背景" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7BC97C27BF77C900C4BAD0 /* Debug */,
+				4C7BC97D27BF77C900C4BAD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C7BC95F27BF77C800C4BAD0 /* Project object */;
+}

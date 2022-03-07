@@ -1,9 +1,4 @@
-//
-//  NextViewController.swift
-//  test01
-//
-//  Created by michael on 2021/6/25.
-//
+
 
 import UIKit
 import WebKit

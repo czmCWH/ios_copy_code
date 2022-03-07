@@ -155,3 +155,14 @@ do {
         self.timer?.fireDate = Date.distantFuture
     }
 }
+
+// MARK: - 在合适的时机移除 timer
+
+do {
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if let _ = self.navigationController {
+            self.removeTimer()
+        }
+    }
+}

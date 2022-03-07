@@ -29,7 +29,7 @@ do {
 }
 
 // MARK: - UIImage图片压缩
-
+// https://www.jianshu.com/p/24155a2afe36
 do {
     let imgData = UIImage(named: "good_icon")?.pngData()
     print("===czm===", imgData?.count)

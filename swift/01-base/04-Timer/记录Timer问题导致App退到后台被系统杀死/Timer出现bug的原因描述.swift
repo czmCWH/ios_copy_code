@@ -5,6 +5,7 @@ import Foundation
  
  博客讲解：  (iOS app退到后台经常被杀，重新启动体验很差)[https://www.jianshu.com/p/f4385ad5b076]
  
+ https://juejin.cn/post/6956368092830285860
  
  */
 

@@ -1,0 +1,6 @@
+framework module Pods___Cell______ {
+  umbrella header "Pods-单个Cell设置圆角背景-umbrella.h"
+
+  export *
+  module * { export * }
+}
