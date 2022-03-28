@@ -17,7 +17,9 @@ textField.attributedPlaceholder = NSAttributedString(string: "搜索框占位文
 textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 28, height: 30))
 textField.leftViewMode = .always
 
+// 设置回车键，显示搜索文案
 textField.returnKeyType = .search
+// 当未输入内容时，回车键不准点击
 textField.enablesReturnKeyAutomatically = true
 
 textField.clearButtonMode = .whileEditing

@@ -70,3 +70,7 @@ do {
     attri.insert(attriAttch, at: 0)
     lab.attributedText = attri
 }
+
+
+let string = NSMutableAttributedString()
+string.addAttribute(.foregroundColor(UIColor.red), range: range) // 不传递Color会报错

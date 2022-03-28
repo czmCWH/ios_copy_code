@@ -16,3 +16,7 @@ if #available(iOS 11.0, *) {
 } else {
     safeAreaBottomH = 0
 }
+
+
+
+https://github.com/mokong/SwiftCommonExtension/blob/main/CommonSwiftExtension/Common/Extension/UIKit_Extensions.swift

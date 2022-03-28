@@ -6,3 +6,6 @@
 // 返回宽度一致的所有数字的标准系统字体
 lab.font = UIFont.monospacedDigitSystemFont(ofSize: 16, weight: .regular)
 ```
+
+
+https://github.com/mokong/SwiftCommonExtension/blob/main/CommonSwiftExtension/Common/Extension/UIFont_Extensions.swift
