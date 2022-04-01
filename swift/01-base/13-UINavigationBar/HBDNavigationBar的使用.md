@@ -9,7 +9,7 @@ override func viewDidLoad() {
     super.viewDidLoad()
     
     self.title = "首页"
-    self.hbd_barTintColor =  UIColor.red
+    self.hbd_barTintColor =  UIColor.white
     self.hbd_barStyle = .default
     self.hbd_barShadowHidden = false
     
