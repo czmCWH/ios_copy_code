@@ -11,6 +11,10 @@ swift5.0判断字符串中是否含有emoji表情的那些坑：https://www.jian
 func test1() {
     guard let validate = textView.text else { return }
     
+    
+    // 正则匹配中文的两种形式：
+    //  \\u4e00-\\u9fa50  或 \\p{Script=Han}
+    
     let regex = "[\\u4e00-\\u9fa50-9a-zA-Z]"
 //        let regex = "[\\p{Script=Han}0-9a-zA-Z]"
     

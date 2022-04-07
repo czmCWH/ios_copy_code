@@ -1,5 +1,4 @@
-
-// MARK: - ----------------------- System -----------------------
+// MARK: - 通用系统高度System
 
 /// 状态栏高度
 let kStatusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
@@ -17,7 +16,7 @@ let kScreenH: CGFloat = UIScreen.main.bounds.height
 let kScreenScale = UIScreen.main.scale
 
 
-// MARK: - ----------------------- 闭包 -----------------------
+// MARK: - 通用闭包
 
 /// 无参数闭包
 typealias FWVoidBlock = ()->Void
@@ -25,3 +24,10 @@ typealias FWVoidBlock = ()->Void
 typealias FWIsFinishedBlock = (_ isFinished: Bool)->Void
 /// 通用的错误回调
 typealias FWErrorBlock = (_ errCode: Int, _ errMsg: String?)->Void
+
+// MARK: - 把一组数分为几行几列,九宫格
+func test1() {
+    let dataCount = dataArray.count + 1
+    let surplus = dataCount%4
+    let row = dataCount/4 + (dataCount%4 == 0 ? 0 : 1)
+}
