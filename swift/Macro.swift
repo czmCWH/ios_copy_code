@@ -31,3 +31,21 @@ func test1() {
     let surplus = dataCount%4
     let row = dataCount/4 + (dataCount%4 == 0 ? 0 : 1)
 }
+
+// MARK: - UI属性特殊写法
+
+do {
+    private var imageView: UIImageView = {
+        $0.image = #imageLiteral(resourceName: "fail")
+        $0.backgroundColor = .clear
+        return $0
+    } ( UIImageView() )
+    
+    public lazy var button: UIButton = {
+        $0.titleLabel?.font = UIFont(name: "GillSans-UltraBold", size: 20)
+        $0.setTitle("好难过~戳我重试一下 (˶‾᷄ ⁻̫ ‾᷅˵) ", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+        $0.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        return $0
+    } ( UIButton() )
+}
