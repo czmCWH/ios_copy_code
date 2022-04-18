@@ -12,13 +12,13 @@ extension String {
         guard self.count > 0 && fixedWidth > 0 else {
             return 0
         }
-        return sizeText(font: font, size: CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude)).height
+        return ceil(sizeText(font: font, size: CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude)).height)
     }
     
     /// 计算文本一行最大宽度
     func sizeTextWidth(font: UIFont) -> CGFloat {
         guard self.count > 0 else { return 0 }
-        return sizeText(font: font, size: CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0)).width
+        return ceil(sizeText(font: font, size: CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0)).width)
     }
     
     /// 计算文本显示的size
