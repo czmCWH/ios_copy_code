@@ -193,35 +193,35 @@ extension String {
 
 }
 
-// MARK: - 字符串去掉emoji，暂用
-
-// https://www.jianshu.com/p/c63b043cb9bd，尽量采用此方式
-
-// https://www.hangge.com/blog/cache/detail_1647.html
-
-/*
- 
- let str1: String = "欢迎🆚访问💓😄hangg👨‍👧‍👧♠️🐈‍⬛e.com🗯🕍"
- //判断表情的正则表达式
- let pattern = "[\\ud83c\\udc00-\\ud83c\\udfff]|[\\ud83d\\udc00-\\ud83d\\udfff]|[\\u2600-\\u27ff]"
- //替换后的字符串
- let str2 = str1.pregReplace(pattern: pattern, with: "")
- 
- */
+// MARK: - 字符串脱敏
 
 extension String {
-    //返回字数
-    var ex_count: Int {
-        let string_NS = self as NSString
-        return string_NS.length
+    
+    /// 把电话号码字符串脱敏处理，即后4位显示，后4位的前面最多隐藏4位
+    func showPhoneStr() -> String {
+        var codeStr = self
+        if self.count > 4 {
+            let num = (self.count - 4) > 4 ? 4 : self.count - 4
+            let start = self.index(self.endIndex, offsetBy: -(num + 4))
+            let end = self.index(self.endIndex, offsetBy: -4)
+            let range = Range(uncheckedBounds: (lower: start, upper: end))
+            let replaceStr = String(repeating: "*", count: num)
+            codeStr = self.replacingCharacters(in: range, with: replaceStr)
+        }
+        return codeStr
     }
-     
-    //使用正则表达式替换
-    func pregReplace(pattern: String, with: String,
-                     options: NSRegularExpression.Options = []) -> String {
-        let regex = try! NSRegularExpression(pattern: pattern, options: options)
-        return regex.stringByReplacingMatches(in: self, options: [],
-                                              range: NSMakeRange(0, self.ex_count),
-                                              withTemplate: with)
+    
+    /// 把身份证号前3后3正常显示，中间脱敏
+    func showIdNumStr() -> String {
+        var codeStr = self
+        if self.count > 3 {
+            let num = (self.count - 6) > 0 ? self.count - 6 : 0
+            let start = self.index(self.startIndex, offsetBy: 3)
+            let end = self.index(self.endIndex, offsetBy: -3)
+            let range = Range(uncheckedBounds: (lower: start, upper: end))
+            let replaceStr = String(repeating: "*", count: num)
+            codeStr = self.replacingCharacters(in: range, with: replaceStr)
+        }
+        return codeStr
     }
 }
