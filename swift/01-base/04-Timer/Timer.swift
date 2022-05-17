@@ -62,6 +62,15 @@ func removeTimer() {
     }
 }
 
+override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    
+    if self.navigationController == nil {
+        self.removeTimer()
+    }
+    
+}
+
 // MARK: - Timer 闭包 的方式实现计时器
 
 do {

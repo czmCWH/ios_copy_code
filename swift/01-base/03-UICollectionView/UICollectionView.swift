@@ -36,7 +36,7 @@ class NextViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.backgroundColor = UIColor(0xFFFFFF)
         
         // 是否允许滑动,默认为true
-        collectionView.scrollEnabled = true
+        collectionView.isScrollEnabled = true
         /*
          是否只允许同时滑动一个方向,默认为false。
          如果设置为true, 用户在水平/竖直方向开始进行滑动, 便禁止同时在竖直/水平方向滑动。
