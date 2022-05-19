@@ -54,13 +54,13 @@ do {
 
 // 两个时间对象之间间隔的秒数
 do {
-    let aDate = Date("2021-12-05 10:30:00")!
-    let anDate = Date("2021-12-05 10:31:00")!
+    let minDate = Date("2021-12-05 10:30:00")!
+    let maxDate = Date("2021-12-05 10:31:00")!
     
     if #available(iOS 13.0, *) {
-        print(anDate.distance(to: aDate))       // 打印：-60
+        print(maxDate.distance(to: minDate))       // 打印：-60
     } else {
-        print(aDate.timeIntervalSince(anDate))      // 打印：-60
+        print(minDate.timeIntervalSince(maxDate))      // 打印：-60
     }
 }
 

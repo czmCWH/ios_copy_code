@@ -47,7 +47,7 @@ do {
     let day = totalSeconds/(24*3600)
     let hour = (totalSeconds/3600)%24
     let minute = (totalSeconds/60)%60
-            let second = totalSeconds%60
+    let second = totalSeconds%60
     
     let hourStr = String(format: "%02d", hour)
     let minuteStr = String(format: "%02d", minute)
