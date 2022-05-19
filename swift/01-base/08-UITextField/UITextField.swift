@@ -24,6 +24,13 @@ textField.enablesReturnKeyAutomatically = true
 
 textField.clearButtonMode = .whileEditing
 
+// 是否可以编辑、选择
+textField.allowsEditingTextAttributes = false
+
+textField.defaultTextAttributes = [.font: UIFont.systemFont(ofSize: 15),
+                                   .kern: 10,       // 字符之间的间隔
+                                   .foregroundColor: UIColor.black]
+
 textField.delegate = self;
 self.addSubviewToFill(textField)
 
@@ -72,4 +79,28 @@ func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange
     }
 
     return true
+}
+
+// 限制UITextField输入文字数量
+public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    guard
+        let oldString = textField.text,
+        let range = Range(range, in: oldString)
+        else { return false }
+    
+    let newString = oldString.replacingCharacters(in: range, with: string)
+    let shouldChange = newString.count <= maxLength
+    
+    if newString.count >= maxLength {
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else { return }
+            self.textField.resignFirstResponder()
+        }
+    }
+    
+    if shouldChange {
+        self.delegate?.verificationCode(self, didChange: newString)
+    }
+    
+    return shouldChange
 }

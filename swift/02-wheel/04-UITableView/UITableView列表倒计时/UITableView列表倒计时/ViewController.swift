@@ -17,6 +17,10 @@
  
     1、在VC中添加 Timer
     2、Timer更新时，发送通知，刷新每个Cell
+ 
+ 也可以看看第三方：
+ https://github.com/herobin22/OYCountDownManager-Swift iOS在cell中使用倒计时的处理方法, 全局使用一个NSTimer对象, 支持单列表.多列表.多页面.分页列表使用
+ 
  */
 
 
