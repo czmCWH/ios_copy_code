@@ -28,3 +28,14 @@ button.snp.makeConstraints { (make) in
 //            make.bottom.equalTo(superview).offset(-20)
 //            make.right.equalTo(superview).offset(-20)
 //        }
+
+
+
+------------ 设置每个 stack View的 子subView 等size 排列
+
+let stackView = UIStackView()
+stackView.axis = .horizontal
+stackView.alignment = .fill
+stackView.distribution = .fillEqually
+stackView.spacing = 15
+return stackView

@@ -11,6 +11,13 @@ class TwoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // viewDidLoad 中获取不到 safeAreaInsets
+        if #available(iOS 11.0, *) {
+            print("===czm1===", self.view.safeAreaInsets)
+        } else {
+            
+        }
+        
     }
     
     /// 视图即将可见时调用
@@ -34,8 +41,8 @@ class TwoViewController: UIViewController {
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        // 通常写一些UI布局
     }
-
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -53,4 +60,18 @@ class TwoViewController: UIViewController {
         return true
     }
 
+    
+    @available(iOS 11.0, *)
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        // 只有当系统执行这个方法时，view.safeAreaInsets 才会有值，在viewDidload时，safeAreaInsets是没有值的
+        print("======", self.view.safeAreaInsets)
+    }
 }
+
+let kSafeAreaInsets: UIEdgeInsets = {
+    guard #available(iOS 11.0, *), let safeAreaInsets = UIApplication.shared.keyWindow?.safeAreaInsets else {
+        return .zero
+    }
+    return safeAreaInsets
+}()
