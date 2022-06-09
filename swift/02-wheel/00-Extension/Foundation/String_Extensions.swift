@@ -225,3 +225,8 @@ extension String {
         return codeStr
     }
 }
+
+
+
+
+// https://www.it610.com/article/1304003470667321344.htm  Swift:字符串范围截取操作

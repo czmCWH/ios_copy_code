@@ -68,7 +68,22 @@ class NextViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        
+        //  此方法，当动态更新某个cell高度时，可使用。可以避免键盘输入时，刷新高度而失去焦点。
+        collectionView.performBatchUpdates {
+            
+            // 不能在该回调里调用 reloadData
+//            collectionView.reloadData()
+        } completion: { res in
+        }
+        
+        
+        
     }
+    
+    
+    
     
 }
 
