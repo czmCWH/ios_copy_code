@@ -2,6 +2,8 @@
 /* 分段组件：类似于常用的购物app头部标签View
  利用 UIScrollView 实现，参考自 https://github.com/Danie1s/DNSPageView
  
+ 
+ https://github.com/JoanKing/JKPageView
  ---- 使用方式
  
  let segementView = ZMSegementView()
@@ -17,6 +19,12 @@
      $0.top.equalTo(300)
      $0.height.equalTo(46)
  }
+ 
+ 
+ //
+ 
+ // https://wenku.baidu.com/view/8431d206de36a32d7375a417866fb84ae45cc3e4.html
+ 
  
  */
 
