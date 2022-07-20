@@ -32,6 +32,9 @@ class NextViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // 每一组的内边距，默认值为.zero。
         flowLayout.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         
+        // 不要随便设置，否则会导致 Cell 不显示
+        flowLayout.estimatedItemSize = .zero
+        
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = UIColor(0xFFFFFF)
         
